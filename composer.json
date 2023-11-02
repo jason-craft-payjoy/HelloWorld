@@ -1,0 +1,60 @@
+{
+    "name": "payjoy/hello-world",
+    "description": "Hello world example from Longhorn PHP",
+    "license": "Proprietary",
+    "type": "library",
+    "keywords": [
+        "test",
+        "example",
+        "conference"
+    ],
+    "authors": [
+        {
+            "name": "Jason Craft",
+            "email": "jason.craft@payjoy.com",
+            "homepage": "https://payjoy.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ramsey/devtools": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "PayJoy\\HelloWorld\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PayJoy\\Test\\HelloWorld\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ramsey/composer-repl": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true,
+            "captainhook/plugin-composer": true,
+            "ramsey/devtools": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "captainhook": {
+            "force-install": true
+        },
+        "ramsey/conventional-commits": {
+            "configFile": "conventional-commits.json"
+        },
+        "ramsey/devtools": {
+            "command-prefix": "dev",
+            "memory-limit": "-1"
+        }
+    }
+}
